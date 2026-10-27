@@ -1,0 +1,211 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * StayBD Design System — "Vibrant Horizon"
+ * Translated from the Stitch design system (project 8000073372175780545).
+ * Trust blue (primary), energetic red (conversion), vibrant teal (success).
+ */
+:root {
+  --background: #fcf9f8;
+  --foreground: #1c1b1b;
+  --card: #ffffff;
+  --card-foreground: #1c1b1b;
+  --popover: #ffffff;
+  --popover-foreground: #1c1b1b;
+
+  --primary: #002155;
+  --primary-foreground: #ffffff;
+  --primary-container: #003580;
+  --on-primary-container: #7fa1f2;
+  --primary-fixed: #d9e2ff;
+  --primary-fixed-dim: #b0c6ff;
+
+  --secondary: #e61e2e;
+  --secondary-foreground: #ffffff;
+  --secondary-container: #ffdad7;
+  --on-secondary-container: #930014;
+
+  --tertiary: #00a698;
+  --tertiary-foreground: #ffffff;
+  --tertiary-container: #00413b;
+  --on-tertiary-container: #2ab5a7;
+
+  --muted: #f0eded;
+  --muted-foreground: #434651;
+  --accent: #f6f3f2;
+  --accent-foreground: #1c1b1b;
+  --destructive: #ba1a1a;
+  --destructive-foreground: #ffffff;
+  --border: #c4c6d3;
+  --input: #c4c6d3;
+  --ring: #003580;
+  --outline: #747782;
+
+  --surface-dim: #dcd9d9;
+  --surface-container-low: #f6f3f2;
+  --surface-container: #f0eded;
+  --surface-container-high: #eae7e7;
+  --surface-container-highest: #e5e2e1;
+
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #0e1420;
+  --foreground: #f3f0ef;
+  --card: #161d2c;
+  --card-foreground: #f3f0ef;
+  --popover: #161d2c;
+  --popover-foreground: #f3f0ef;
+
+  --primary: #b0c6ff;
+  --primary-foreground: #001945;
+  --primary-container: #003580;
+  --on-primary-container: #d9e2ff;
+  --primary-fixed: #d9e2ff;
+  --primary-fixed-dim: #b0c6ff;
+
+  --secondary: #ffb3ae;
+  --secondary-foreground: #410004;
+  --secondary-container: #930014;
+  --on-secondary-container: #ffdad7;
+
+  --tertiary: #5bdacb;
+  --tertiary-foreground: #00201d;
+  --tertiary-container: #00413b;
+  --on-tertiary-container: #7af7e7;
+
+  --muted: #1d2534;
+  --muted-foreground: #a9adb9;
+  --accent: #1d2534;
+  --accent-foreground: #f3f0ef;
+  --destructive: #ffb4ab;
+  --destructive-foreground: #5f0011;
+  --border: #2a3242;
+  --input: #2a3242;
+  --ring: #b0c6ff;
+  --outline: #8f93a1;
+
+  --surface-dim: #0e1420;
+  --surface-container-low: #161d2c;
+  --surface-container: #1a2231;
+  --surface-container-high: #252d3c;
+  --surface-container-highest: #303847;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-outline: var(--outline);
+
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-label: var(--font-work-sans), var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  /* Typography scale — Vibrant Horizon */
+  --text-display-lg: 3rem;
+  --text-display-lg--line-height: 3.5rem;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 800;
+
+  --text-headline-lg: 2rem;
+  --text-headline-lg--line-height: 2.5rem;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-md: 1.5rem;
+  --text-headline-md--line-height: 2rem;
+  --text-headline-md--font-weight: 700;
+
+  --text-title-lg: 1.25rem;
+  --text-title-lg--line-height: 1.75rem;
+  --text-title-lg--font-weight: 600;
+
+  --text-price-display: 1.375rem;
+  --text-price-display--line-height: 1.75rem;
+  --text-price-display--font-weight: 800;
+
+  --text-body-lg: 1rem;
+  --text-body-lg--line-height: 1.5rem;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 0.875rem;
+  --text-body-md--line-height: 1.25rem;
+  --text-body-md--font-weight: 400;
+
+  --text-label-md: 0.75rem;
+  --text-label-md--line-height: 1rem;
+  --text-label-md--letter-spacing: 0.05em;
+  --text-label-md--font-weight: 600;
+
+  /* Elevation — tonal layers + ambient shadows */
+  --shadow-card: 0 1px 2px rgb(0 33 85 / 0.06), 0 8px 24px rgb(0 53 128 / 0.08);
+  --shadow-lift: 0 4px 8px rgb(0 33 85 / 0.08), 0 16px 40px rgb(0 53 128 / 0.16);
+  --shadow-float: 0 8px 16px rgb(0 33 85 / 0.12), 0 24px 64px rgb(0 33 85 / 0.24);
+
+  --container-site: 80rem;
+
+  --spacing-gutter: 1.5rem;
+  --spacing-stack-sm: 0.5rem;
+  --spacing-stack-md: 1rem;
+  --spacing-stack-lg: 2rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
